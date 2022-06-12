@@ -18,13 +18,15 @@
 // rotate 2 steps to the right: [3,99,-1,-100]
 
 
-let nums = [1,2,3,4,5,6,7];
-let k = 3;
+let nums = [0,1,0,3,12];
+let k = 2;
 let result = [...nums];
-
+nums.so
 let len = nums.length;
 for(let i = 0; i < len; i++){
-    let index = (i + k) % len;
-    nums[index] = result[i];
+    let mod = k % len;
+    console.log((mod + i) % len);
+    let index = (mod + i) % len;
+    nums[i] = result[index];
 }
 console.log(nums);
